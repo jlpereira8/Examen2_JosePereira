@@ -19,6 +19,12 @@ string
 /home/jlpereira/Música/Examen2_JosePereira/string
 vector
 /home/jlpereira/Música/Examen2_JosePereira/vector
+string
+-
+fstream
+-
+iostream
+-
 
 /home/jlpereira/Música/Examen2_JosePereira/main.cpp
 iostream
@@ -33,4 +39,8 @@ fstream
 /home/jlpereira/Música/Examen2_JosePereira/fstream
 Princi.h
 /home/jlpereira/Música/Examen2_JosePereira/Princi.h
+cstring
+/home/jlpereira/Música/Examen2_JosePereira/cstring
+string.h
+-
 
