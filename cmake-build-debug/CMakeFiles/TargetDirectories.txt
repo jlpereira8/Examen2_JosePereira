@@ -1,0 +1,3 @@
+/home/jlpereira/Música/Examen2_JosePereira/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/jlpereira/Música/Examen2_JosePereira/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/jlpereira/Música/Examen2_JosePereira/cmake-build-debug/CMakeFiles/Examen2_JosePereira.dir

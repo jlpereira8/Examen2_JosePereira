@@ -1,0 +1,36 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/jlpereira/Música/Examen2_JosePereira/Node.h
+Usuario.h
+/home/jlpereira/Música/Examen2_JosePereira/Usuario.h
+
+/home/jlpereira/Música/Examen2_JosePereira/Princi.h
+Node.h
+/home/jlpereira/Música/Examen2_JosePereira/Node.h
+
+/home/jlpereira/Música/Examen2_JosePereira/Usuario.h
+string
+/home/jlpereira/Música/Examen2_JosePereira/string
+vector
+/home/jlpereira/Música/Examen2_JosePereira/vector
+
+/home/jlpereira/Música/Examen2_JosePereira/main.cpp
+iostream
+-
+Usuario.h
+/home/jlpereira/Música/Examen2_JosePereira/Usuario.h
+Node.h
+/home/jlpereira/Música/Examen2_JosePereira/Node.h
+ostream
+-
+fstream
+/home/jlpereira/Música/Examen2_JosePereira/fstream
+Princi.h
+/home/jlpereira/Música/Examen2_JosePereira/Princi.h
+
