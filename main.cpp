@@ -4,6 +4,9 @@
 #include <ostream>
 #include "fstream"
 #include "Princi.h"
+#include "cstring"
+#include <string.h>
+
 
 
 using std::cout;
@@ -12,8 +15,15 @@ using std::endl;
 using std::ofstream;
 using std::ios;
 using std::vector;
-void escribir_binario();
+using std::strcpy;
+
+void escribir_binario(vector<Usuario>);
+
+
+
 void leer_binario();
+
+using std::ostream;
 
 int main() {
     /*
@@ -52,8 +62,9 @@ int main() {
         cout << " * (2_.) Registrarse                                    * " << endl;
         cout << "*  (3_.) Salir                                           *" << endl;
         cout << " *       --Ingrese su desicion                          * " << endl;
-        cout << "*                                                        *" << endl;
+        cout << "*  (4_.) Escribir a binario                            *" << endl;
         cout << " *                                                      * " << endl;
+        cout << "*                                                      *" << endl;
         cout << " * * * * * * * * * * * * * * * * * * * * * * * * * * * *  " << endl;
         cout << "* * * * * * * * * * * * * * * * * * * * * * * * * * * * * " << endl;
         int des;
@@ -99,16 +110,74 @@ int main() {
                         }
                     }
                     for (int l = 0; l <ola.size() ; ++l) {
-                       // cout<<ola.at(l).getNombre()<<endl;
+                        if (actual.getUser()==ola.at(l).getUser()){
+
+                        }else{
+                            cout<<l<<") "<<ola.at(l).getUser()<<endl;
+                        }
                     }
+                    cout<<"Ingrese la posicion del contacto sugerido que desea agregar: "<<endl;
+                    int po;
+                    cin>>po;
+
+                    for (int m = 0; m < sor.size(); ++m) {
+                        if (sor.at(m).getUser()==actual.getUser()){
+                            sor.at(m).addUser(ola.at(po));
+                            break;
+                        }
+                    }
+                    cout<<"Usuario agregado correctamente"<<endl;
 
                 }else if(u==2){
-
+                    int y;
+                    for (int m = 0; m < sor.size(); ++m) {
+                        if (sor.at(m).getUser()==actual.getUser()){
+                          y=m;
+                          m=12312;
+                          break;
+                        }
+                    }
+                    for (int i = 0; i <sor.at(y).getUsers().size() ; ++i) {
+                        cout<<"Usuario: "<<sor.at(y).getUsers().at(i).getUser()<<" Nombre: "<<sor.at(y).getUsers().at(i).getNombre()<<endl;
+                        cout<<"Edad: "<<sor.at(y).getUsers().at(i).getEdad()<<" Genero: "<<sor.at(y).getUsers().at(i).getSexo()<<endl;
+                        cout<<endl;
+                    }
                 }else if(u==3){
+                    for (int i = 0; i <sor.size() ; ++i) {
+                        for (int k = 0; k < actual.getIntereses().size() ; ++k) {
+                            for (int j = 0; j <sor.at(i).getIntereses().size() ; ++j) {
+                                if (actual.getIntereses().at(k)==sor.at(i).getIntereses().at(j)) {
 
+                                    //cout<<sor.at(i).getNombre();
+                                }else{
+                                    ola.push_back(sor.at(i));
+                                }
+                            }
+                        }
+                    }
+                    for (int l = 0; l <ola.size() ; ++l) {
+                        if (actual.getUser()==ola.at(l).getUser()){
+
+                        }else{
+                            cout<<l<<") "<<ola.at(l).getUser()<<endl;
+                        }
+                    }
+                    cout<<"Ingrese la posicion del contacto sugerido que desea agregar: "<<endl;
+                    int po;
+                    cin>>po;
+
+                    for (int m = 0; m < sor.size(); ++m) {
+                        if (sor.at(m).getUser()==actual.getUser()){
+                            sor.at(m).addUser(ola.at(po));
+                            break;
+                        }
+                    }
+                    cout<<"Usuario agregado correctamente"<<endl;
                 }else{
                     cout<<"Dato no Valido..."<<endl;
                 }
+            }else{
+                cout<<"Usuario y/o cuenta no validos..."<<endl;
             }
 
         } else if (des == 2) {
@@ -150,7 +219,13 @@ int main() {
         } else if (des == 3) {
             w = 99;
 
-        } else {
+        } else if(des==4){
+            escribir_binario(sor);
+
+        } else if(des==5){
+            leer_binario();
+        }
+        else {
 
             //else if(nodo_principal->getPrincipal()->getNext()==NULL){
 /*
@@ -172,10 +247,20 @@ int main() {
 }
 //palad
 
-void escribir_usuario(){
 
-}
+void escribir_binario(vector<Usuario> v) {
+    ofstream alumnosW("Users.dat", std::ios::binary);
+    for (int i = 0; i < v.size(); ++i) {
 
-void leer_binario(){
+        Usuario *alumno1 = new Usuario(v.at(i).getNombre(), v.at(i).getEdad(), v.at(i).getSexo(), v.at(i).getUser(),
+                                       v.at(i).getContra());
+        alumno1->write(alumnosW);
+        alumnosW.close();
+
+        string data;
+        cin >> data;
+
+        cout << data;
+    }
 
 }

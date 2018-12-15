@@ -11,6 +11,18 @@ using std::string;
 #include "vector"
 using std::vector;
 
+#include <string>
+using std::string;
+
+#include <fstream>
+using std::ifstream;
+using std::ofstream;
+
+#include <iostream>
+using std::endl;
+
+using std::ostream;
+
 class Usuario {
 private:
     string Nombre;
@@ -62,6 +74,12 @@ public:
 
     void setContra(const string &contra);
 
+    //binarios
+
+    void write(ofstream&);
+    void read(ifstream&);
+
+    friend ostream& operator<<(ostream&, Usuario*);
 };
 
 
