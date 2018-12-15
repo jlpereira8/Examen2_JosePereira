@@ -170,6 +170,7 @@ int main() {
         return 0;
 
 }
+//palad
 
 void escribir_usuario(){
 
