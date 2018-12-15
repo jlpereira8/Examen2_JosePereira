@@ -78,7 +78,7 @@ int main() {
                 cout << "* * * * * * * * * * * * * * * * * * * * * * * * * * * * * " << endl;
                 cout << " * * * * * * * * * * * * * * * * * * * * * * * * * * * *  " << endl;
                 cout << "*                       BIENVENIDO                      * " << endl;
-                cout << " *  1) Sugeridos                                        * " << endl;
+                cout << " *  1) Sugeridos                                         * " << endl;
                 cout << "*   2) Contactos                                        * " << endl;
                 cout << "*   3) Resto                                             * " << endl;
                 cout << " *                                                      * " << endl;
